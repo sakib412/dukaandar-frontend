@@ -1,0 +1,8 @@
+/* CSS Implementing Plugins */
+@import '../public/assets/vendor/icon-set/style.css';
+@import '../public/assets/vendor/select2/dist/css/select2.min.css';
+@import '../public/assets/vendor/chart.js/dist/Chart.min.css';
+@import '../public/assets/vendor/daterangepicker/daterangepicker.css';
+
+/* CSS Front Template */
+@import '../public/assets/css/theme.min.css'

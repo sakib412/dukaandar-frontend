@@ -46,7 +46,7 @@ export default function Home() {
       {/* JS Front */}
       <Script src="/assets/js/theme.min.js" />
       {/* JS Plugins Init */}
-      <Script src="/assets/js/js-plugins_init.js" />
+      <Script src="/assets/js/js-plugins_init.js" strategy='lazyOnload' />
       {/* IE Support */}
       <Script src='/assets/js/ie-support.js' />
 

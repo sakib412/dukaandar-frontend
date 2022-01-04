@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+/* eslint-disable @next/next/no-html-link-for-pages */
 import Link from 'next/link'
 import React from 'react'
 import { useRouter } from 'next/router'

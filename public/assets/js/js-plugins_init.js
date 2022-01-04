@@ -43,8 +43,8 @@ $('.js-form-search').each(function () {
 
 // INITIALIZATION OF SELECT2
 // =======================================================
-$('.js-select2-custom').each(function () {
-    var select2 = $.HSCore.components.HSSelect2.init($(this));
+$('.js-select2-custom') && $('.js-select2-custom').each(function () {
+    var select2 = $.HSCore?.components.HSSelect2.init($(this));
 });
 
 
@@ -53,10 +53,10 @@ $('.js-select2-custom').each(function () {
 Chart.plugins.unregister(ChartDataLabels);
 
 $('.js-chart').each(function () {
-    $.HSCore.components.HSChartJS.init($(this));
+    $.HSCore?.components.HSChartJS.init($(this));
 });
 
-var updatingChart = $.HSCore.components.HSChartJS.init($('#updatingData'));
+var updatingChart = $.HSCore?.components.HSChartJS.init($('#updatingData'));
 
 // CALL WHEN TAB IS CLICKED
 // =======================================================
@@ -102,7 +102,7 @@ $('[data-toggle="chart-bar"]').click(function (e) {
 // INITIALIZATION OF BUBBLE CHARTJS WITH DATALABELS PLUGIN
 // =======================================================
 $('.js-chart-datalabels').each(function () {
-    $.HSCore.components.HSChartJS.init($(this), {
+    $.HSCore?.components.HSChartJS.init($(this), {
         plugins: [ChartDataLabels],
         options: {
             plugins: {
@@ -183,7 +183,7 @@ cb(start, end);
 
 // INITIALIZATION OF DATATABLES
 // =======================================================
-var datatable = $.HSCore.components.HSDatatables.init($('#datatable'), {
+var datatable = $.HSCore?.components.HSDatatables.init($('#datatable'), {
     select: {
         style: 'multi',
         selector: 'td:first-child input[type="checkbox"]',
@@ -229,5 +229,5 @@ $('#datatableSearch').on('mouseup', function (e) {
 // INITIALIZATION OF CLIPBOARD
 // =======================================================
 $('.js-clipboard').each(function () {
-    var clipboard = $.HSCore.components.HSClipboard.init(this);
+    var clipboard = $.HSCore?.components.HSClipboard.init(this);
 });

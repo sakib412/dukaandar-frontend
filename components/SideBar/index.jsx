@@ -1,8 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from 'next/link'
 import React from 'react'
+import { useRouter } from 'next/router'
 
 function SideBar() {
+    const router = useRouter()
+    const currentRoute = router.pathname
     return (
         <aside className="js-navbar-vertical-aside navbar navbar-vertical-aside navbar-vertical navbar-vertical-fixed navbar-expand-xl navbar-bordered ">
             <div className="navbar-vertical-container">
@@ -10,7 +13,7 @@ function SideBar() {
                     <div className="navbar-brand-wrapper justify-content-between">
                         {/* <!-- Logo --> */}
 
-                        <Link href="/">
+                        <Link href='/'>
                             <a className="navbar-brand" aria-label="Front">
                                 <img className="navbar-brand-logo" src="./assets/svg/logos/logo.svg" alt="Logo" />
                                 <img className="navbar-brand-logo-mini" src="./assets/svg/logos/logo-short.svg" alt="Logo" />
@@ -111,9 +114,9 @@ function SideBar() {
 
 
                                     <li className="nav-item">
-                                        <a className="nav-link " href="./referrals.html" title="Referrals">
+                                        <a href='/signup' className={`nav-link ${currentRoute === '/signup' ? 'active' : ''}`} title="Sign Up">
                                             <span className="tio-circle nav-indicator-icon"></span>
-                                            <span className="text-truncate">Referrals</span>
+                                            <span className="text-truncate">Sign Up</span>
                                         </a>
                                     </li>
                                 </ul>
@@ -123,9 +126,9 @@ function SideBar() {
 
 
                             <li className="nav-item ">
-                                <a className="js-nav-tooltip-link nav-link " href="./welcome-page.html" title="Welcome page" data-placement="left">
+                                <a className="js-nav-tooltip-link nav-link " href="/signup" title="Welcome page" data-placement="left">
                                     <i className="tio-visible-outlined nav-icon"></i>
-                                    <span className="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">Welcome Page</span>
+                                    <span className="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">Sign Up</span>
                                 </a>
                             </li>
 
